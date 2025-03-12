@@ -1,0 +1,75 @@
+
+# Git Cheatsheet
+
+## Configuration
+- Set username: `git config --global user.name "Your Name"`
+- Set email: `git config --global user.email "you@example.com"`
+- Set default text editor: `git config --global core.editor "vim"`
+
+## Repository
+- Initialize a repository: `git init`
+- Clone a repository: `git clone <repository_url>`
+
+## Basic Workflow
+- Check status: `git status`
+- Add changes to staging area: `git add <file>`
+- Commit changes: `git commit -m "message"`
+- Push to remote: `git push origin <branch_name>`
+- Pull from remote: `git pull origin <branch_name>`
+
+## Branching
+- List branches: `git branch`
+- Create a new branch: `git branch <branch_name>`
+- Switch to a branch: `git checkout <branch_name>`
+- Create and switch to a new branch: `git checkout -b <branch_name>`
+- Merge branch into current branch: `git merge <branch_name>`
+- Delete a branch: `git branch -d <branch_name>`
+- Rename branch: `git branch -M <new_name>`
+
+## Remote
+- List remote repositories: `git remote -v`
+- Add a remote: `git remote add origin <repository_url>`
+- Remove a remote: `git remote remove origin`
+- Push all branches to remote: `git push --all`
+- Fetch changes from remote: `git fetch origin`
+- Pull changes from remote: `git pull origin <branch_name>`
+
+## Stashing
+- Save changes to stash: `git stash`
+- List stashes: `git stash list`
+- Apply latest stash: `git stash apply`
+- Apply a specific stash: `git stash apply stash@{index}`
+- Drop a stash: `git stash drop stash@{index}`
+- Pop a stash (apply and remove): `git stash pop`
+
+## Rebase and Merge
+- Rebase a branch onto another: `git rebase <branch_name>`
+- Merge a branch into the current branch: `git merge <branch_name>`
+- Cancel a rebase: `git rebase --abort`
+- Continue after a rebase conflict: `git rebase --continue`
+- Merge with no fast-forward: `git merge --no-ff <branch_name>`
+
+## History
+- View commit history: `git log`
+- View commit history with diff: `git log -p`
+- Show a specific commit: `git show <commit_hash>`
+- View a specific file's history: `git log -- <file_name>`
+- Search commit by message: `git log --grep="<search_text>"`
+
+## Undo Changes
+- Undo changes in a file: `git checkout -- <file>`
+- Unstage a file: `git reset <file>`
+- Reset to a previous commit: `git reset --hard <commit_hash>`
+- Remove untracked files: `git clean -f`
+
+## Tagging
+- Create a new tag: `git tag <tag_name>`
+- List tags: `git tag`
+- Push a tag to remote: `git push origin <tag_name>`
+- Delete a local tag: `git tag -d <tag_name>`
+- Delete a remote tag: `git push --delete origin <tag_name>`
+
+## Git Stash
+- Save untracked files to stash: `git stash -u`
+- Apply changes from stash: `git stash apply`
+- Remove all stash entries: `git stash clear`
