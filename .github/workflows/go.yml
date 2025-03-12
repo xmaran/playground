@@ -23,10 +23,10 @@ jobs:
 
     - name: Build |
       run: |
-      cd svc
-      go build -v ./...
+        cd play123/svc
+        go build -v ./...
 
     - name: Test
       run: |
-      cd svc 
-      go test -v ./...
+        cd play123/svc 
+        go test -v ./...
